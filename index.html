@@ -3,78 +3,155 @@
 
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Présentation</title>
-   
+    <style>
+        /* Mise en forme de base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
+        /* Couleurs et espacement du body */
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* En-tête du portfolio */
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        p.intro {
+            font-size: 1.2em;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        /* Conteneur principal */
+        .container {
+            width: 90%;
+            max-width: 800px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* Titres des sections */
+        h3 {
+            font-size: 1.8em;
+            color: #2980b9;
+            margin-bottom: 15px;
+        }
+
+        /* Liste de compétences et expériences */
+        li {
+            font-size: 1em;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 8px;
+        }
+
+        /* Style pour les titres de chaque expérience */
+        strong {
+            color: #16a085;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        /* Sous-sections */
+        h4 {
+            font-size: 1.3em;
+            color: #8e44ad;
+            margin-top: 20px;
+        }
+
+        /* Espacement entre les paragraphes */
+        p {
+            margin-bottom: 15px;
+        }
+
+        /* Lien entre différentes sections */
+        hr {
+            border: none;
+            height: 1px;
+            background-color: #ddd;
+            margin: 20px 0;
+        }
+    </style>
 </head>
 
 <body>
     <h1>CAYEUX</h1>
-    <p>Elève passioné de sport et d'informatique</p>
-    <a href="IMG_4840.jpg"><img src="IMG_4840.jpg" alt="IMG_4840" style="height: 150px;"></a>
-    <br>
-    <h3>
-        <li>Mon expérience</li>
-    </h3>
-    <br>
-    <p>
-        <strong> FUJIMUNE IT </strong>- 67100 Strasbourg Mars 2024 :
-        <li>Création et développement site web</li>
-        <li>webdesign</li>
-    </p>
-    <p>
-        <strong>MAINTRONIC</strong> - 67450 Mundolsheim Novembre 2023 :
-        <li>Support
-            & réparation des ordinateur de la région Grand-Est </li>
-    </p>
-    <br>
-    <p>
-        <strong>EINEA</strong> – 76260 EU Mars & Juin 2023 :
-        <li>Gestion d’un parc informatique</li>
-        <li> maintenance du réseau.</li>
-    </p>
-    <br>
-    <p>
-        <strong>ILLINFO </strong>- 67400 ILLKIRCH Juin 2022 :
-        <li>Mise en réseau </li>
-        <li>maintenance informatique sur pc portable et fixe.</li>
-    </p>
-    <br>
-    <h3>
-        <li>Mes compétences</li>
-    </h3>
-    <p>
-    <h4>Logiciels:</h4>
-    Support à distance (TeamViewer, Anydesk, bureau à distance) <br>
-    Bureautique (Adobe et Office)<br>
-    Modélisation 3D (Sketchup et Openspace3d)<br>
-    Virutalisation (VirtualBox, Vmware et Proxmox)<br>
-    Câblage et infrastructure:
-    Câblage électrique: Réalisation d'une maquette d’installation électrique d’une<br>
-    maison - 2021, Lycée Gutenberg<br>
-    <h4>Gestion informatique et réseau:</h4>
-    Gestion d’un parc informatique: Préparation et distribution de pc, recyclage et<br>
-    gestion d’anciens pc - Mars 2023, EU<br>
-    Réalisation de commandes de pièces détachées et de matériel - Juin 2023, EU<br>
-    Refonte de salle réseau - Juin 2023, EU<br>
-    Mise à jour et gestion de serveurs de sauvegardes, câblage et entretien de<br>
-    câbles réseaux, répertorier le stock de pièces - Mars 2023, EU<br>
-    Maintenance informatique (tour, pc portable, télévision) - Juin 2022, Illkirch &<br>
-    Novembre 2023, Mundolsheim<br>
-    Mise en réseau d’appareils (pc, nas, afficheur, télévision) - Juin 2022, Illkirch<br>
-    Soudure à l’étain et sur fibre optique (carte électronique/mère pc portable) -<br>
-    Juin 2022, Illkirch<br>
-    <h4>Développement web:</h4>
-    Remise à neuf de site web - Mars 2024, Strasbourg<br>
-    </p>
-    <h3>
-        <li>Ma formation</li>
-    </h3>
-    <p>
-    <strong>2017-2021</strong> Collège Nelson Mandela – Illkirch – Diplômé du Brevet des Collèges – Mention Bien <br>
-    <strong>2021-2024</strong> Lycée Gutenberg - Illkirch - Bac professionnel Systèmes Numériques - Mention Très bien<br>
-    <strong>2024-2026</strong> Lycée Rene Cassin - Strasbourg - BTS SIO </p><br>
+    <p class="intro">Élève passionné de sport et d'informatique</p>
 
+    <div class="container">
+        <h3>Mon expérience</h3>
+        <p><strong>FUJIMUNE IT</strong> - 67100 Strasbourg Mars 2024 :</p>
+        <ul>
+            <li>Création et développement de site web</li>
+            <li>Webdesign</li>
+        </ul>
+        <p><strong>MAINTRONIC</strong> - 67450 Mundolsheim Novembre 2023 :</p>
+        <ul>
+            <li>Support et réparation des ordinateurs de la région Grand-Est</li>
+        </ul>
+        <p><strong>EINEA</strong> – 76260 EU Mars & Juin 2023 :</p>
+        <ul>
+            <li>Gestion d’un parc informatique</li>
+            <li>Maintenance du réseau</li>
+        </ul>
+        <p><strong>ILLINFO</strong> - 67400 Illkirch Juin 2022 :</p>
+        <ul>
+            <li>Mise en réseau</li>
+            <li>Maintenance informatique sur PC portable et fixe</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h3>Mes compétences</h3>
+        <h4>Logiciels :</h4>
+        <ul>
+            <li>Support à distance (TeamViewer, Anydesk, bureau à distance)</li>
+            <li>Bureautique (Adobe et Office)</li>
+            <li>Modélisation 3D (Sketchup et Openspace3d)</li>
+            <li>Virtualisation (VirtualBox, Vmware et Proxmox)</li>
+        </ul>
+        <h4>Câblage et infrastructure :</h4>
+        <ul>
+            <li>Réalisation d'une maquette d’installation électrique d’une maison - 2021, Lycée Gutenberg</li>
+        </ul>
+        <h4>Gestion informatique et réseau :</h4>
+        <ul>
+            <li>Gestion d’un parc informatique, préparation et distribution de PC, recyclage et gestion d’anciens PC</li>
+            <li>Référencement du stock de pièces, câblage et maintenance de serveurs</li>
+        </ul>
+        <h4>Développement web :</h4>
+        <ul>
+            <li>Remise à neuf de site web - Mars 2024, Strasbourg</li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h3>Ma formation</h3>
+        <ul>
+            <li><strong>2017-2021 :</strong> Collège Nelson Mandela – Illkirch – Diplômé du Brevet des Collèges – Mention Bien</li>
+            <li><strong>2021-2024 :</strong> Lycée Gutenberg - Illkirch - Bac professionnel Systèmes Numériques - Mention Très bien</li>
+            <li><strong>2024-2026 :</strong> Lycée Rene Cassin - Strasbourg - BTS SIO</li>
+        </ul>
+    </div>
 </body>
 
 </html>
