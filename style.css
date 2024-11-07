@@ -40,6 +40,7 @@ h1 {
     margin-bottom: 10px;
     text-transform: uppercase;
     animation: fadeIn 1s ease-in-out;
+    font-family: 'Fjalla One', sans-serif;
 }
 
 p.intro {
@@ -63,6 +64,7 @@ p.intro {
 }
 
 h3 {
+    font-family: 'Fjalla One', sans-serif;
     font-size: 1.8em;
     color: #2980b9;
     margin-bottom: 15px;
@@ -82,9 +84,7 @@ li {
     margin-bottom: 8px;
 }
 
-h1, h3, h4 {
-    font-family: 'Fjalla One', sans-serif;
-}
+
 
 strong {
     color: #16a085;
@@ -96,6 +96,7 @@ h4 {
     font-size: 1.3em;
     color: #8e44ad;
     margin-top: 20px;
+    font-family: 'Fjalla One', sans-serif;
 }
 
 p {
