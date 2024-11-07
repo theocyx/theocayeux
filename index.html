@@ -10,7 +10,24 @@
 </head>
 
 <body>
-    <h1>CAYEUX Théo</h1>
+    <span class="menu-btn" onclick="toggleMenu()">☰</span>
+
+<div id="sidebar" class="sidebar">
+    <a href="index.html">Accueil</a>
+    <a href="cv.html">CV</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<script>
+    function toggleMenu() {
+        var sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("active");
+    }
+</script>
+
+</body>
+</html>
+    <h1><a href="index.html" style="color: #CFCFCF" > CAYEUX Théo</a></h1>
     <p class="intro">Élève au Lycée René CASSIN, en première année de BTS SIO</p>
 
     <div class="container">
