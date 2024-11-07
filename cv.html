@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accédez à mon CV</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <span class="menu-btn" onclick="toggleMenu()">☰</span>
+
+    <div id="sidebar" class="sidebar">
+        <a href="index.html">Accueil</a>
+        <a href="cv.html">CV</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    
+    <script>
+        function toggleMenu() {
+            var sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("active");
+        }
+    </script>
+    <h1><a href="index.html" style="color: #CFCFCF" > CAYEUX Théo</a></h1>
+    <p class="intro">Élève au Lycée René CASSIN, en première année de BTS SIO</p>
+
+<div class="cv-container">
+    <h1>Accédez à mon CV</h1>
+
+    <section class="option-view">
+        <p><strong>Visualisez mon CV en ligne :</strong></p>
+        <p>Vous pouvez consulter mon CV directement en cliquant sur le bouton ci-dessous.</p>
+        <a href="cv-viewer.html" class="btn">Visualiser le CV en ligne</a>
+    </section>
+<br>
+    
+</div>
+
+</body>
+</html>
