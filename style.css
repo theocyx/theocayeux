@@ -5,8 +5,8 @@
 }
 
 body {
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #000000;
+    color: #CFCFCF;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -28,7 +28,7 @@ body {
 
 
 h1 {
-    color: #2c3e50;
+    color: #CFCFCF;
     font-size: 2.5em;
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -38,7 +38,7 @@ h1 {
 
 p.intro {
     font-size: 1.2em;
-    color: #555;
+    color: #CFCFCF;
     margin-bottom: 30px;
     animation: fadeIn 1s ease-in-out 0.2s;
 }
@@ -59,15 +59,17 @@ p.intro {
 h3 {
     font-family: 'Fjalla One', sans-serif !important;
     font-size: 1.8em;
-    color: #2980b9;
+    color: #2c3e50;
     margin-bottom: 15px;
     animation: pulse 2s infinite;
+    
 }
 
 ul {
     margin-top: 10px;
     padding-left: 20px;
     list-style-type: disc;
+    color: #2c3e5079;
 }
 
 li {
@@ -78,7 +80,7 @@ li {
 }
 
 strong {
-    color: #16a085;
+    color: #2c3e50;
     font-weight: bold;
     font-size: 1.1em;
 }
@@ -86,7 +88,7 @@ strong {
 h4 {
     font-family: 'Fjalla One', sans-serif !important;
     font-size: 1.3em;
-    color: #8e44ad;
+    color: #2c3e50;
     margin-top: 20px;
 }
 
