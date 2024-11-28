@@ -32,46 +32,68 @@
 
     <div class="container">
         <h3><center>Mon expérience</center></h3>
-        <p><strong>FUJIMUNE IT</strong> - 67100 Strasbourg Mars 2024 :</p>
+        
+        <p>
+            <strong>FUJIMUNE IT</strong> - 67100 Strasbourg Mars 2024 :
+            <button class="btn-photo" onclick="showPhoto('fujimune')">Voir Photo</button>
+        </p>
         <ul>
             <li>Création et développement de site web</li>
             <li>Webdesign</li>
         </ul>
-        <p><strong>MAINTRONIC</strong> - 67450 Mundolsheim Novembre 2023 :</p>
+        
+        <p>
+            <strong>MAINTRONIC</strong> - 67450 Mundolsheim Novembre 2023 :
+            <button class="btn-photo" onclick="showPhoto('maintronic')">Voir Photo</button>
+        </p>
         <ul>
             <li>Support et réparation des ordinateurs de la région Grand-Est</li>
         </ul>
-        <p><strong>EINEA</strong> – 76260 EU Mars & Juin 2023 :</p>
+        
+        <p>
+            <strong>EINEA</strong> – 76260 EU Mars & Juin 2023 :
+            <button class="btn-photo" onclick="showPhoto('einea')">Voir Photo</button>
+        </p>
         <ul>
             <li>Gestion d’un parc informatique</li>
             <li>Maintenance du réseau</li>
         </ul>
-        <p><strong>ILLINFO</strong> - 67400 Illkirch Juin 2022 :</p>
+        
+        <p>
+            <strong>ILLINFO</strong> - 67400 Illkirch Juin 2022 :
+            <button class="btn-photo" onclick="showPhoto('illinfo')">Voir Photo</button>
+        </p>
         <ul>
             <li>Mise en réseau</li>
             <li>Maintenance informatique sur PC portable et fixe</li>
         </ul>
     </div>
+    
+    <!-- Modals pour les photos -->
+    <div id="photoModal" class="modal">
+        <span class="close" onclick="closePhoto()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
 
     <div class="container">
         <h3><center>Mes compétences</center></h3>
-        <h4>Logiciels :</h4>
+        <h4> <strong>Logiciels :</strong></h4>
         <ul>
             <li>Support à distance (TeamViewer, Anydesk, bureau à distance)</li>
             <li>Bureautique (Adobe et Office)</li>
             <li>Modélisation 3D (Sketchup et Openspace3d)</li>
             <li>Virtualisation (VirtualBox, Vmware et Proxmox)</li>
         </ul>
-        <h4>Câblage et infrastructure :</h4>
+        <h4><strong>Câblage et infrastructure :</strong></h4>
         <ul>
             <li>Réalisation d'une maquette d’installation électrique d’une maison - 2021, Lycée Gutenberg</li>
         </ul>
-        <h4>Gestion informatique et réseau :</h4>
+        <h4><strong>Gestion informatique et réseau :</strong></h4>
         <ul>
             <li>Gestion d’un parc informatique, préparation et distribution de PC, recyclage et gestion d’anciens PC</li>
             <li>Référencement du stock de pièces, câblage et maintenance de serveurs</li>
         </ul>
-        <h4>Développement web :</h4>
+        <h4><strong>Développement web :</strong></h4>
         <ul>
             <li>Remise à neuf de site web - Mars 2024, Strasbourg</li>
         </ul>
@@ -86,5 +108,29 @@
         </ul>
     </div>
 </body>
+<script>
+    function showPhoto(company) {
+        var modal = document.getElementById("photoModal");
+        var modalImg = document.getElementById("modalImage");
+
+        // Définissez les images ici pour chaque entreprise
+        var photos = {
+            'fujimune': "fujimuneit.png",
+            'maintronic': "maintronic.png",
+            'einea': "einea.png",
+            'illinfo': "illinfo.png"
+        };
+
+        modal.style.display = "block";
+        modalImg.src = photos[company];
+    }
+
+    function closePhoto() {
+        document.getElementById("photoModal").style.display = "none";
+    }
+</script>
+<!-- Ajouter ce script à la fin de votre fichier HTML avant la balise de fermeture </body> -->
+
+
 
 </html>
