@@ -7,12 +7,25 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <body>
+        <span class="menu-btn" onclick="toggleMenu()">☰</span>
+    
+    <div id="sidebar" class="sidebar">
+        <a href="index.html">Accueil</a>
+        <a href="cv.html">CV</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    
+    <script>
+        function toggleMenu() {
+            var sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("active");
+        }
+    </script>
     <h1><a href="index.html" style="color: #CFCFCF" > CAYEUX Théo</a></h1>
     <p class="intro">Élève au Lycée René CASSIN, en première année de BTS SIO</p>
 <div class="contact-container">
     <h1>Contactez-moi</h1>
-    <p>Vous pouvez me contacter par email en cliquant sur le lien ci-dessous :</p>
-
     <ul>
         <li><strong>Email :</strong> <a href="mailto:cayeuxtheo@gmail.com" class="email-link">cayeuxtheo@gmail.com</a></li>
     </ul>
