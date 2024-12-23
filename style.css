@@ -133,10 +133,10 @@ p {
 
 .sidebar {
     height: 100%;
-    width: 250px;  /* Vous pouvez ajuster cette largeur selon vos préférences */
+    width: 250px;  
     position: fixed;
     top: 0;
-    right: -250px;  /* La barre est cachée à droite par défaut */
+    right: -250px;  
     background-color: #333;
     padding-top: 60px;
     transition: 0.3s;
@@ -144,12 +144,11 @@ p {
     z-index: 1000;
 }
 
-/* Quand la barre latérale est active, elle se déplace à droite */
 .sidebar.active {
-    right: 0;  /* Déplacer la barre à droite */
+    right: 0; 
 }
 
-/* Style des liens dans le menu */
+
 .sidebar a {
     padding: 10px 20px;
     text-decoration: none;
@@ -168,10 +167,10 @@ p {
     font-size: 24px;
     cursor: pointer;
     position: fixed;
-    top: 20px;  /* Positionner le bouton en haut */
-    right: 20px;  /* Positionner à droite */
-    z-index: 1001; /* S'assurer que le bouton soit au-dessus du menu */
-}
+    top: 20px;  
+    right: 20px; 
+    z-index: 1001; 
+    
 .cv-container {
     width: 100%;
     max-width: 600px;
@@ -305,7 +304,6 @@ strong {
     text-decoration: underline;
 }
 
-/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
