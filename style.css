@@ -162,7 +162,6 @@ p {
     background-color: #575757;
 }
 
-/* Positionner le bouton de menu */
 .menu-btn {
     font-size: 24px;
     cursor: pointer;
@@ -170,6 +169,7 @@ p {
     top: 20px;  
     right: 20px; 
     z-index: 1001; 
+}
     
 .cv-container {
     width: 100%;
