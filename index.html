@@ -1,136 +1,173 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Présentation</title>
+    <title>Théo Cayeux | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <span class="menu-btn" onclick="toggleMenu()">☰</span>
 
-<div id="sidebar" class="sidebar">
-    <a href="index.html">Accueil</a>
-    <a href="cv.html">CV</a>
-    <a href="contact.html">Contact</a>
-</div>
+    <nav class="navbar">
+        <div class="nav-logo"><a href="#">THÉO CAYEUX.</a></div>
+        <div class="nav-links">
+            <a href="#experience">Expérience</a>
+            <a href="#competences">Compétences</a>
+            <a href="#formation">Formation</a>
+            <a href="cv.html">Mon CV</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
 
-<script>
-    function toggleMenu() {
-        var sidebar = document.getElementById("sidebar");
-        sidebar.classList.toggle("active");
-    }
-</script>
-<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-</body>
-</html>
-    <h1><a href="index.html" style="color: #CFCFCF" > CAYEUX Théo</a></h1>
-    <p class="intro">Élève au Lycée René CASSIN, en première année de BTS SIO</p>
+    <header class="hero">
+        <h1>Développeur & <br>Infrastructure.</h1>
+        <p>Étudiant en BTS SIO option SISR au Lycée René Cassin.</p>
+        <a href="#experience" class="btn-cta">Découvrir mon travail</a>
+    </header>
 
-    <div class="container">
-        <h3><center>Mon expérience</center></h3>
-        
-        <p>
-            <strong>FUJIMUNE IT</strong> - 67100 Strasbourg Mars 2024 :
-            <button class="btn-photo" onclick="showPhoto('fujimune')">Voir Photo</button>
-        </p>
-        <ul>
-            <li>Création et développement de site web</li>
-            <li>Webdesign</li>
-        </ul>
-        
-        <p>
-            <strong>MAINTRONIC</strong> - 67450 Mundolsheim Novembre 2023 :
-            <button class="btn-photo" onclick="showPhoto('maintronic')">Voir Photo</button>
-        </p>
-        <ul>
-            <li>Support et réparation des ordinateurs de la région Grand-Est</li>
-        </ul>
-        
-        <p>
-            <strong>EINEA</strong> – 76260 EU Mars & Juin 2023 :
-            <button class="btn-photo" onclick="showPhoto('einea')">Voir Photo</button>
-        </p>
-        <ul>
-            <li>Gestion d’un parc informatique</li>
-            <li>Maintenance du réseau</li>
-        </ul>
-        
-        <p>
-            <strong>ILLINFO</strong> - 67400 Illkirch Juin 2022 :
-            <button class="btn-photo" onclick="showPhoto('illinfo')">Voir Photo</button>
-        </p>
-        <ul>
-            <li>Mise en réseau</li>
-            <li>Maintenance informatique sur PC portable et fixe</li>
-        </ul>
-    </div>
-    
-    <!-- Modals pour les photos -->
+    <section id="experience">
+        <h2>Expérience Professionnelle</h2>
+        <div class="grid-container">
+            
+            <div class="card">
+                <span class="date">Mars 2024 • Strasbourg</span>
+                <h3>Fujimune IT</h3>
+                <ul>
+                    <li>Création et développement de site web</li>
+                    <li>Webdesign et refonte graphique</li>
+                    <li>Technologies : HTML, CSS, JS</li>
+                </ul>
+                <span class="btn-photo-link" onclick="showPhoto('fujimune')">Voir le projet &rarr;</span>
+            </div>
+
+            <div class="card">
+                <span class="date">Nov 2023 • Mundolsheim</span>
+                <h3>Maintronic</h3>
+                <ul>
+                    <li>Support technique régional</li>
+                    <li>Réparation hardware ordinateurs</li>
+                    <li>Maintenance préventive</li>
+                </ul>
+                <span class="btn-photo-link" onclick="showPhoto('maintronic')">Voir l'atelier &rarr;</span>
+            </div>
+
+            <div class="card">
+                <span class="date">Mars & Juin 2023 • Eu</span>
+                <h3>Einea</h3>
+                <ul>
+                    <li>Gestion de parc informatique</li>
+                    <li>Maintenance infrastructure réseau</li>
+                    <li>Déploiement de postes</li>
+                </ul>
+                <span class="btn-photo-link" onclick="showPhoto('einea')">Voir photo &rarr;</span>
+            </div>
+
+            <div class="card">
+                <span class="date">Juin 2022 • Illkirch</span>
+                <h3>Illinfo</h3>
+                <ul>
+                    <li>Mise en réseau d'équipements</li>
+                    <li>Maintenance PC portables et fixes</li>
+                    <li>Configuration NAS</li>
+                </ul>
+                <span class="btn-photo-link" onclick="showPhoto('illinfo')">Voir photo &rarr;</span>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="competences">
+        <h2>Compétences Techniques</h2>
+        <div class="bento-grid">
+            <div class="bento-item" style="grid-column: span 2;">
+                <h4>Développement</h4>
+                <ul>
+                    <li>HTML5, CSS3, JavaScript</li>
+                    <li>PHP, SQL, Python</li>
+                    <li>Refonte de sites web</li>
+                </ul>
+            </div>
+            <div class="bento-item">
+                <h4>Logiciels</h4>
+                <ul>
+                    <li>Suite Adobe & Office</li>
+                    <li>TeamViewer, Anydesk</li>
+                    <li>Packet Tracer</li>
+                </ul>
+            </div>
+            <div class="bento-item">
+                <h4>Virtualisation</h4>
+                <ul>
+                    <li>Proxmox, Vmware</li>
+                    <li>VirtualBox</li>
+                </ul>
+            </div>
+            <div class="bento-item" style="grid-column: span 2;">
+                <h4>Infrastructure & Réseau</h4>
+                <ul>
+                    <li>Câblage et baies de brassage</li>
+                    <li>Active Directory, Kace</li>
+                    <li>Gestion de serveurs de sauvegarde</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="formation">
+        <h2>Parcours Scolaire</h2>
+        <div class="grid-container">
+            <div class="card">
+                <span class="date">2024 - 2026</span>
+                <h3>BTS SIO • Option SISR</h3>
+                <p style="color: #86868b; font-size: 0.9rem;">Lycée René Cassin, Strasbourg</p>
+            </div>
+            <div class="card">
+                <span class="date">2021 - 2024</span>
+                <h3>Bac Pro Systèmes Numériques</h3>
+                <p style="color: #86868b; font-size: 0.9rem;">Lycée Gutenberg, Illkirch <br> Mention Très Bien</p>
+            </div>
+        </div>
+    </section>
+
     <div id="photoModal" class="modal">
         <span class="close" onclick="closePhoto()">&times;</span>
         <img class="modal-content" id="modalImage">
     </div>
 
-    <div class="container">
-        <h3><center>Mes compétences</center></h3>
-        <h4> <strong>Logiciels :</strong></h4>
-        <ul>
-            <li>Support à distance (TeamViewer, Anydesk, bureau à distance)</li>
-            <li>Bureautique (Adobe et Office)</li>
-            <li>Modélisation 3D (Sketchup et Openspace3d)</li>
-            <li>Virtualisation (VirtualBox, Vmware et Proxmox)</li>
-        </ul>
-        <h4><strong>Câblage et infrastructure :</strong></h4>
-        <ul>
-            <li>Réalisation d'une maquette d’installation électrique d’une maison - 2021, Lycée Gutenberg</li>
-        </ul>
-        <h4><strong>Gestion informatique et réseau :</strong></h4>
-        <ul>
-            <li>Gestion d’un parc informatique, préparation et distribution de PC, recyclage et gestion d’anciens PC</li>
-            <li>Référencement du stock de pièces, câblage et maintenance de serveurs</li>
-        </ul>
-        <h4><strong>Développement web :</strong></h4>
-        <ul>
-            <li>Remise à neuf de site web - Mars 2024, Strasbourg</li>
-        </ul>
-    </div>
+    <script>
+        function showPhoto(company) {
+            var modal = document.getElementById("photoModal");
+            var modalImg = document.getElementById("modalImage");
+            
+            // Assurez-vous que vos images sont bien dans le dossier
+            var photos = {
+                'fujimune': "fujimuneit.png",
+                'maintronic': "maintronic.png",
+                'einea': "einea.png",
+                'illinfo': "illinfo.png"
+            };
 
-    <div class="container">
-        <h3><center>Ma formation</center></h3>
-        <ul>
-            <li><strong>2017-2021 :</strong> Collège Nelson Mandela – Illkirch – Diplômé du Brevet des Collèges – Mention Bien</li>
-            <li><strong>2021-2024 :</strong> Lycée Gutenberg - Illkirch - Bac professionnel Systèmes Numériques - Mention Très bien</li>
-            <li><strong>2024-2026 :</strong> Lycée Rene Cassin - Strasbourg - BTS SIO</li>
-        </ul>
-    </div>
-<div class="badge-base LI-profile-badge" data-locale="fr_FR" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="theocayeux" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://fr.linkedin.com/in/theocayeux?trk=profile-badge">Théo CAYEUX</a></div>
-              
+            if(photos[company]) {
+                modal.style.display = "block";
+                modalImg.src = photos[company];
+            } else {
+                alert("Image non disponible pour l'instant.");
+            }
+        }
+
+        function closePhoto() {
+            document.getElementById("photoModal").style.display = "none";
+        }
+
+        // Fermer le modal en cliquant à côté de l'image
+        window.onclick = function(event) {
+            var modal = document.getElementById("photoModal");
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
-<script>
-    function showPhoto(company) {
-        var modal = document.getElementById("photoModal");
-        var modalImg = document.getElementById("modalImage");
-
-        // Définissez les images ici pour chaque entreprise
-        var photos = {
-            'fujimune': "fujimuneit.png",
-            'maintronic': "maintronic.png",
-            'einea': "einea.png",
-            'illinfo': "illinfo.png"
-        };
-
-        modal.style.display = "block";
-        modalImg.src = photos[company];
-    }
-
-    function closePhoto() {
-        document.getElementById("photoModal").style.display = "none";
-    }
-</script>
-
-
 </html>
