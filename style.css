@@ -8,7 +8,6 @@
     --text-muted: #86868b;
     --accent: #2997ff; /* Bleu Apple */
     --hover-bg: #2c2c2e;
-    --success: #30d158; /* Vert succès */
     --font-stack: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -67,7 +66,7 @@ ul { list-style: none; }
 }
 
 .hero h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
     font-weight: 700;
     letter-spacing: -2px;
     margin-bottom: 20px;
@@ -77,14 +76,14 @@ ul { list-style: none; }
 }
 
 .hero p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--text-muted);
     max-width: 600px;
     margin-bottom: 40px;
 }
 
 /* =========================================
-   BOUTONS (Style mis à jour)
+   BOUTONS
    ========================================= */
 .btn-cta {
     display: inline-block;
@@ -93,21 +92,14 @@ ul { list-style: none; }
     color: var(--bg-color);
     border-radius: 30px;
     font-weight: 600;
-    transition: transform 0.2s, box-shadow 0.2s, background-color 0.3s;
-    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
     border: none;
-    text-decoration: none;
+    cursor: pointer;
 }
 
 .btn-cta:hover { 
     transform: scale(1.05); 
     box-shadow: 0 0 20px rgba(255,255,255,0.3); 
-}
-
-/* État "Copié" pour le JS */
-.btn-cta.copied {
-    background-color: var(--success);
-    color: white;
 }
 
 .btn-photo-link {
@@ -207,49 +199,14 @@ section h2 {
 }
 
 /* =========================================
-   CONTACT WRAPPER
-   ========================================= */
-.contact-wrapper {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    animation: fadeIn 1s ease-out;
-    margin-top: 60px;
-}
-.contact-title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    letter-spacing: -1.5px;
-    margin-bottom: 20px;
-    background: linear-gradient(180deg, #fff, #888);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-.contact-text { font-size: 1.2rem; color: var(--text-muted); max-width: 500px; margin-bottom: 50px; }
-.social-links { margin-top: 60px; display: flex; gap: 20px; }
-.social-btn {
-    padding: 10px 20px;
-    background: var(--card-bg);
-    border-radius: 20px;
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    transition: 0.3s;
-}
-.social-btn:hover { background: var(--hover-bg); color: var(--text-main); transform: translateY(-3px); }
-
-/* =========================================
-   RESPONSIVE
+   RESPONSIVE & ANIMATIONS
    ========================================= */
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.5rem; }
-    .bento-grid { grid-template-columns: 1fr; } /* Passe en 1 colonne sur mobile */
+    .bento-grid { grid-template-columns: 1fr; } 
     .bento-item { grid-column: span 1 !important; }
     .navbar { padding: 20px; }
-    .nav-links { display: none; } /* Cache le menu sur mobile (simple) */
+    .nav-links { display: none; }
 }
 
 @keyframes fadeIn {
