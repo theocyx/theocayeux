@@ -1,6 +1,19 @@
 /* =========================================
    VARIABLES & RESET
    ========================================= */
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+    background: linear-gradient(180deg, #fff, #888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* --- AJOUTEZ CECI --- */
+    user-select: none; /* Empêche de sélectionner le texte (bleu) */
+    cursor: default;   /* Force la souris à rester une flèche, pas un curseur texte */
+}
 :root {
     --bg-color: #000000;
     --card-bg: #1c1c1e;
