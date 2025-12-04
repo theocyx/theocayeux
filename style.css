@@ -11,6 +11,12 @@
     --font-stack: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
+/* --- AJOUT POUR LE DÉFILEMENT FLUIDE --- */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px; /* Offset pour la navbar fixe */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -36,7 +42,8 @@ ul { list-style: none; }
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 20px 40px;
+    height: 80px; /* Hauteur fixe pour la cohérence */
+    padding: 0 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,7 +55,7 @@ ul { list-style: none; }
 }
 
 .nav-logo { font-weight: 700; font-size: 1.2rem; letter-spacing: -0.5px; }
-.nav-links a { margin-left: 30px; color: var(--text-muted); font-size: 0.9rem; }
+.nav-links a { margin-left: 30px; color: var(--text-muted); font-size: 0.9rem; font-weight: 500; }
 .nav-links a:hover { color: var(--text-main); }
 
 /* =========================================
@@ -115,7 +122,7 @@ ul { list-style: none; }
    LAYOUTS & GRIDS
    ========================================= */
 section {
-    padding: 100px 10%;
+    padding: 50px 10%; /* Réduit un peu car scroll-padding fait le travail */
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -205,7 +212,7 @@ section h2 {
     .hero h1 { font-size: 2.5rem; }
     .bento-grid { grid-template-columns: 1fr; } 
     .bento-item { grid-column: span 1 !important; }
-    .navbar { padding: 20px; }
+    .navbar { padding: 0 20px; } /* Ajustement padding mobile */
     .nav-links { display: none; }
 }
 
