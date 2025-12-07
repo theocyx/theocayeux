@@ -26,15 +26,30 @@
         .btn-download:hover { background-color: #147ce5; }
     </style>
 </head>
+
+<script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+    }
+</script>
+
 <body>
     
-    <nav class="navbar">
+  <nav class="navbar">
         <div class="nav-logo"><a href="index.html">THÉO CAYEUX.</a></div>
+        
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
         <div class="nav-links">
             <a href="index.html">Retour Accueil</a>
         </div>
     </nav>
-
+    
     <div class="cv-wrapper">
         <h1 style="font-size: 3rem; margin-bottom: 20px;">Curriculum Vitae</h1>
         <p style="color: var(--text-muted); margin-bottom: 40px;">Consultez mon parcours détaillé ou téléchargez le PDF.</p>

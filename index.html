@@ -12,10 +12,17 @@
 
     <nav class="navbar">
         <div class="nav-logo"><a href="#">THÉO CAYEUX.</a></div>
+        
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
         <div class="nav-links">
-            <a href="#experience">Expérience</a>
+            <a href="#experience">Expériences</a>
             <a href="#competences">Compétences</a>
-            <a href="#formation">Formation</a>
+            <a href="#formation">Formations</a>
             <a href="cv.html">Mon CV</a>
             <a href="contact.html">Contact</a>
         </div>
@@ -29,7 +36,7 @@
     </header>
 
     <section id="experience">
-        <h2>Expérience Professionnelle</h2>
+        <h2>Expériences Professionnelles</h2>
         <div class="grid-container">
             
             <div class="card">
@@ -52,7 +59,7 @@
 
             <div class="card">
                 <span class="date">Mars 2024 • Strasbourg</span>
-                <h3>Fujimune IT</h3>
+                <h3>FUJIMUNE IT</h3>
                 <ul>
                     <li>Remise à neuf de site web</li>
                     <li>Développement Front-End (HTML, CSS, JS)</li>
@@ -61,7 +68,7 @@
 
             <div class="card">
                 <span class="date">Nov 2023 • Mundolsheim</span>
-                <h3>Maintronic</h3>
+                <h3>MAINTRONIC</h3>
                 <ul>
                     <li>Support et réparation d'ordinateurs</li>
                     <li>Maintenance informatique régionale</li>
@@ -70,7 +77,7 @@
 
             <div class="card">
                 <span class="date">Mars & Juin 2023 • Eu</span>
-                <h3>Einea</h3>
+                <h3>EINEA</h3>
                 <ul>
                     <li>Refonte de salle réseau</li>
                     <li>Gestion de parc (Déploiement, Master)</li>
@@ -80,7 +87,7 @@
 
             <div class="card">
                 <span class="date">Juin 2022 • Illkirch</span>
-                <h3>Illinfo</h3>
+                <h3>ILLINFO</h3>
                 <ul>
                     <li>Mise en réseau d'appareils (NAS, PC)</li>
                     <li>Maintenance PC portables et fixes</li>
@@ -142,8 +149,7 @@
     </section>
 
     <section id="formation">
-        <h2>Parcours Scolaire</h2>
-        <div class="grid-container">
+        <h2>Parcours Scolaire</h2> <div class="grid-container">
             <div class="card">
                 <span class="date">2024 - 2026 (En cours)</span>
                 <h3>BTS SIO • Option SISR</h3>
@@ -157,42 +163,23 @@
         </div>
     </section>
 
-    <div id="photoModal" class="modal">
-        <span class="close" onclick="closePhoto()">&times;</span>
-        <img class="modal-content" id="modalImage">
-    </div>
-
     <script>
-        function showPhoto(company) {
-            var modal = document.getElementById("photoModal");
-            var modalImg = document.getElementById("modalImage");
-            
-            var photos = {
-                'emha': "emha.png", 
-                'fujimune': "fujimuneit.png",
-                'maintronic': "maintronic.png",
-                'einea': "einea.png",
-                'illinfo': "illinfo.png"
-            };
-
-            if(photos[company]) {
-                modal.style.display = "block";
-                modalImg.src = photos[company];
-            } else {
-                alert("Image non disponible pour l'instant.");
-            }
+        // --- GESTION DU MENU BURGER UNIQUEMENT ---
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
         }
 
-        function closePhoto() {
-            document.getElementById("photoModal").style.display = "none";
-        }
-
-        window.onclick = function(event) {
-            var modal = document.getElementById("photoModal");
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
+        // Fermer le menu au clic sur un lien
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.querySelector('.nav-links');
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        });
     </script>
+
 </body>
 </html>
