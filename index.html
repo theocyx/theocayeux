@@ -164,18 +164,37 @@
     </section>
 
     <script>
-        // --- GESTION DU MENU BURGER UNIQUEMENT ---
+        // --- 1. GESTION DU MENU BURGER ---
         function toggleMenu() {
             const navLinks = document.querySelector('.nav-links');
             navLinks.classList.toggle('active');
         }
 
-        // Fermer le menu au clic sur un lien
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                const navLinks = document.querySelector('.nav-links');
-                if (navLinks.classList.contains('active')) {
-                    navLinks.classList.remove('active');
+        // --- 2. DEFILEMENT FLUIDE (SMOOTH SCROLL) FORCE ---
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                // On empêche le comportement brutal par défaut
+                e.preventDefault();
+
+                // On trouve la cible (ex: section #experience)
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+
+                if (targetSection) {
+                    // On ferme le menu burger si on est sur mobile
+                    const navLinks = document.querySelector('.nav-links');
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                    }
+
+                    // Calcul de la position (Hauteur de la section - 80px de menu)
+                    const offsetTop = targetSection.offsetTop - 80;
+
+                    // Scroll doux manuel
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
                 }
             });
         });
