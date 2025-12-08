@@ -2,41 +2,60 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon CV | Théo Cayeux</title>
-    <link rel="stylesheet" href="style.css"> <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
     <style>
-        /* Style spécifique pour centrer le contenu sur cette page */
+        /* Style de base */
         .cv-wrapper {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
+            padding-top: 80px; /* Évite que le menu cache le titre */
+            padding-bottom: 40px;
         }
+        
+        .cv-container {
+            width: 80%;
+            max-width: 1000px;
+            height: 60vh;
+            background: #333;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
         .btn-download {
             background-color: var(--accent);
             color: white;
             padding: 15px 40px;
             border-radius: 30px;
             font-weight: 600;
-            margin-top: 20px;
+            margin-top: 30px;
             display: inline-block;
+            transition: 0.3s;
         }
-        .btn-download:hover { background-color: #147ce5; }
+        .btn-download:hover { 
+            background-color: #147ce5; 
+            transform: scale(1.05);
+        }
+
+        /* AJOUT CSS MOBILE : Ajuste la taille du titre et du cadre sur téléphone */
+        @media (max-width: 768px) {
+            .cv-wrapper h1 { font-size: 2.2rem !important; }
+            .cv-container { width: 95%; height: 50vh; }
+        }
     </style>
 </head>
 
-<script>
-    function toggleMenu() {
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.toggle('active');
-    }
-</script>
-
 <body>
     
-  <nav class="navbar">
+    <nav class="navbar">
         <div class="nav-logo"><a href="index.html">THÉO CAYEUX.</a></div>
         
         <div class="menu-toggle" onclick="toggleMenu()">
@@ -49,18 +68,24 @@
             <a href="index.html">Retour Accueil</a>
         </div>
     </nav>
-    
+
     <div class="cv-wrapper">
         <h1 style="font-size: 3rem; margin-bottom: 20px;">Curriculum Vitae</h1>
         <p style="color: var(--text-muted); margin-bottom: 40px;">Consultez mon parcours détaillé ou téléchargez le PDF.</p>
         
-        <div style="width: 80%; max-width: 1000px; height: 60vh; background: #333; border-radius: 10px; overflow: hidden;">
-            <iframe src="CV.pdf" width="100%" height="100%" style="border: none;"></iframe>
+        <div class="cv-container">
+            <iframe src="cv.pdf" width="100%" height="100%" style="border: none;"></iframe>
         </div>
 
         <a href="cv.pdf" download class="btn-download">Télécharger le PDF</a>
     </div>
 
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+
 </body>
 </html>
-
