@@ -81,28 +81,27 @@
     </style>
 </head>
 
-<script>
-    function toggleMenu() {
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.toggle('active');
-    }
-</script>
-
 <body>
 
     <nav class="navbar">
         <div class="nav-logo"><a href="index.html">THÉO CAYEUX.</a></div>
+        
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
         <div class="nav-links">
             <a href="index.html">Accueil</a>
             <a href="cv.html">Mon CV</a>
         </div>
-
     </nav>
 
     <section class="contact-wrapper">
         <h1 class="contact-title">Parlons de <br>votre projet.</h1>
         
-        <p class="contact-text">
+        <p style="font-size: 1.2rem; color: var(--text-muted); max-width: 500px; margin-bottom: 50px;">
             Je suis toujours à la recherche de nouvelles opportunités. N'hésitez pas à me contacter.
         </p>
 
@@ -114,12 +113,18 @@
             <p style="color: #555; font-size: 0.9rem;">Ou copiez l'adresse : <br> <span style="color: #fff; user-select: all;">cayeuxtheo@gmail.com</span></p>
         </div>
 
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/theocayeux/" target="_blank" class="social-btn">LinkedIn</a>
-            <a href="cv.html" class="social-btn">Voir mon CV</a>
+        <div style="margin-top: 60px; display: flex; gap: 20px;">
+            <a href="https://www.linkedin.com/in/theocayeux/" target="_blank" style="color: var(--text-muted);">LinkedIn</a>
+            <a href="cv.html" style="color: var(--text-muted);">Voir mon CV</a>
         </div>
     </section>
 
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+
 </body>
 </html>
-
