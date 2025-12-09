@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mes Projets E4 & E5 | Théo Cayeux</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* PETIT AJOUT CSS JUSTE POUR CETTE PAGE (Badges E4/E5) */
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .badge {
+            padding: 5px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        .badge-e4 { background-color: #2997ff; color: white; } /* Bleu */
+        .badge-e5 { background-color: #ff9f0a; color: white; } /* Orange */
+        
+        .project-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .btn-doc {
+            display: inline-block;
+            border: 1px solid var(--text-muted);
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+        .btn-doc:hover {
+            border-color: var(--text-main);
+            background: rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo"><a href="index.html">THÉO CAYEUX.</a></div>
+        
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">Accueil</a>            
+            <a href="index.html#experience">Expériences</a>
+            <a href="index.html#competences">Compétences</a>
+            <a href="index.html#formation">Formations</a>
+            <a href="cv.html">Mon CV</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero" style="height: 40vh; min-height: 300px;">
+        <h1>Épreuves E4 & E5</h1>
+        <p>Documentation technique et situations professionnelles <br>pour le BTS SIO SISR.</p>
+    </header>
+
+    <section>
+        <div class="grid-container">
+            
+            <div class="card">
+                <div class="project-header">
+                    <span class="date">EINEA • Stage 1</span>
+                    <span class="badge badge-e4">Epreuve E4</span>
+                </div>
+                <h3>Refonte de la salle réseau</h3>
+                <p class="project-desc">
+                    Analyse de l'existant, brassage des câbles, identification des ports et mise à jour des plans avec Visio.
+                </p>
+                <ul>
+                    <li>Gestion du patrimoine informatique</li>
+                    <li>Réponse à un incident</li>
+                </ul>
+                <br>
+                <a href="docs/projet-reseau.pdf" target="_blank" class="btn-doc">Voir la fiche E4 (PDF)</a>
+            </div>
+
+            <div class="card">
+                <div class="project-header">
+                    <span class="date">Lycée • PPE</span>
+                    <span class="badge badge-e5">Epreuve E5</span>
+                </div>
+                <h3>Mise en place Active Directory</h3>
+                <p class="project-desc">
+                    Installation d'un contrôleur de domaine sous Windows Server 2019, création des GPO et des utilisateurs.
+                </p>
+                <ul>
+                    <li>Administration des systèmes</li>
+                    <li>Sécurisation des accès</li>
+                </ul>
+                <br>
+                <a href="#" class="btn-doc">Voir la doc technique</a>
+            </div>
+
+            <div class="card">
+                <div class="project-header">
+                    <span class="date">EMHA • Stage 2</span>
+                    <span class="badge badge-e4">Epreuve E4</span>
+                </div>
+                <h3>Gestion de tickets (GLPI)</h3>
+                <p class="project-desc">
+                    Traitement des demandes utilisateurs, prise en main à distance et clôture des incidents niveau 1 et 2.
+                </p>
+                <ul>
+                    <li>Assistance aux utilisateurs</li>
+                    <li>Maintenance du parc</li>
+                </ul>
+                <br>
+                <a href="#" class="btn-doc">Voir la fiche E4</a>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
+
+</body>
+</html>
